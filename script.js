@@ -10,7 +10,7 @@ let randomColors = []
 function generateColor() {
     let random = 0
     for (let i = 0; i < 5; i++) {
-        random = (Math.random(i) * (999999-100000) + 100000).toFixed(0)
+        random = (Math.random(i) * (999999 - 100000) + 100000).toFixed(0)
         randomColors.push(random)
     }
     return
@@ -26,89 +26,59 @@ function randomHexa() {
 
 
 window.onload(
-    generateColor(),
-    randomHexa(),
-    option1.style.backgroundColor = randomColors[4],
-option2.style.backgroundColor = randomColors[3],
-option3.style.backgroundColor = randomColors[2],
-option4.style.backgroundColor = randomColors[1],
-option5.style.backgroundColor = randomColors[0]
+  reload()
 )
-
-// option1.style.backgroundColor = randomColors[4]
-// option2.style.backgroundColor = randomColors[3]
-// option3.style.backgroundColor = randomColors[2]
-// option4.style.backgroundColor = randomColors[1]
-// option5.style.backgroundColor = randomColors[0]
-
-
-
 
 
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
+        r: Math.floor(parseInt(result[1], 16)),
+        g: Math.floor(parseInt(result[2], 16)),
+        b: Math.floor(parseInt(result[3], 16))
     } : null;
 }
 
-function findRGB(){
-    const obj = hexToRgb(randomHexa())
-    const rgb = `(${obj.r}, ${obj.g}, ${obj.b})`
-    return obj.r+obj.g+obj.b
+function findRGB() {
+    let obj = hexToRgb(randomHexa())
+    const rgb = `(${obj.r},${obj.g},${obj.b})`
+    return obj.r + obj.g + obj.b
 }
 
 
-function correctAnswer(option){
+function correctAnswer(option) {
+    let result = document.getElementById('message-result');
+
     let score = document.getElementById("resultado")
-    let newScore = Number(score)
     let rgb = findRGB()
     let sumrgb = sumRGB(option)
-    console.log(findRGB())
-    console.log(sumRGB(option))
-
-    if( rgb === sumrgb){
-        console.log("igual")
-        randomColors = []
+ 
+    if (rgb == sumrgb) {
         reload()
-        option1.style.backgroundColor = randomColors[4]
-        option2.style.backgroundColor = randomColors[3]
-        option3.style.backgroundColor = randomColors[2]
-        option4.style.backgroundColor = randomColors[1]
-        option5.style.backgroundColor = randomColors[0]
-        score.innerText ++
-    }else{
-        randomColors = []
+        score.innerText++
+        result.innerText = "Got it!"
+    } else {
         reload()
-        option1.style.backgroundColor = randomColors[4]
-        option2.style.backgroundColor = randomColors[3]
-        option3.style.backgroundColor = randomColors[2]
-        option4.style.backgroundColor = randomColors[1]
-        option5.style.backgroundColor = randomColors[0]
-       
+        result.innerText = "Wrong :("
     }
 }
 
-function sumRGB(option){
+function sumRGB(option) {
     const array = (option.style.backgroundColor.split("rgb")[1].split("(")[1].split(")")[0].split(","))
-    const total = Number(array[0])+ Number(array[1]) + Number(array[2])
+    const total = Number(array[0]) + Number(array[1]) + Number(array[2])
     return total
 }
 
 
-function reload(){
+function reload() {
+    randomColors = []
+    console.log(randomColors)
     generateColor()
     randomHexa()
+    option1.style.backgroundColor = randomColors[4]
+    option2.style.backgroundColor = randomColors[3]
+    option3.style.backgroundColor = randomColors[2]
+    option4.style.backgroundColor = randomColors[1]
+    option5.style.backgroundColor = randomColors[0]
 }
-
-option1.addEventListener("click", correctAnswer(option1))
-option2.addEventListener("click", correctAnswer(option2))
-option3.addEventListener("click", correctAnswer(option3))
-option4.addEventListener("click", correctAnswer(option4))
-option5.addEventListener("click", correctAnswer(option5))
-
-
-
 
