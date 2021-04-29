@@ -60,6 +60,7 @@ function correctAnswer(option) {
     } else {
         reload()
         result.innerText = "Wrong :("
+        score.innerText = 0
     }
 }
 
