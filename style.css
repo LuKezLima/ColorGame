@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    background: linear-gradient(to right, rgba(192, 65, 84, 0.685),rgb(226, 89, 226));
+    margin: 0 auto;
+    width: 100vw;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0 auto;
+    height: 90vh;
+    background: linear-gradient(to right, rgba(192, 65, 84, 0.685),rgb(226, 89, 226));
+}
+
+.container{
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.group-opcoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color-generator{
+    display: flex;
+    justify-content: center;
+}
+
+.color-generator h2{
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 3px rgb(8, 8, 8);
+    letter-spacing: 2px;
+}
+
+.result-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 3px rgb(8, 8, 8);
+    letter-spacing: 2px;
+}
+
+#titulo{
+    font-size: 5.6rem;
+    font-weight: 300;
+    color: rgb(245, 245, 245);
+    text-shadow: 2px 3px rgb(8, 8, 8);
+    letter-spacing: 2px;
+    text-decoration: underline 4px white;
+}
+
+
+.opcoes{
+    background-color: rgb(245, 245, 245);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0px 13px;
+    border: 2px dotted black;
+    cursor: pointer;
+}
+
+#option1{
+background-color: teal;
+}
+#option2{
+    background-color: orange;
+}
+#option3{
+    background-color: black;
+}
+#option4{
+    background-color: blue;
+}
+#option5{
+    background-color: red;
+}
