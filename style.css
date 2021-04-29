@@ -7,7 +7,7 @@
 }
 
 header{
-    background: linear-gradient(to right, rgba(192, 65, 84, 0.685),rgb(226, 89, 226));
+    background: linear-gradient(to right, rgba(248, 113, 134, 0.685),rgb(243, 120, 243));
     margin: 0 auto;
     width: 100vw;
     height: 14vh;
@@ -24,7 +24,7 @@ main{
     width: 100vw;
     margin: 0 auto;
     height: 90vh;
-    background: linear-gradient(to right, rgba(192, 65, 84, 0.685),rgb(226, 89, 226));
+    background: linear-gradient(to right, rgba(248, 113, 134, 0.685),rgb(243, 120, 243));
 }
 
 .container{
@@ -53,7 +53,7 @@ main{
     font-size: 3.4rem;
     font-weight: 300;
     color: rgb(245, 245, 245);
-    text-shadow: 2px 3px rgb(8, 8, 8);
+    text-shadow: 2px 2px rgb(8, 8, 8);
     letter-spacing: 2px;
 }
 
@@ -65,7 +65,7 @@ main{
     font-size: 1.7rem;
     font-weight: 300;
     color: rgb(245, 245, 245);
-    text-shadow: 2px 3px rgb(8, 8, 8);
+    text-shadow: 2px 2px rgb(8, 8, 8);
     letter-spacing: 2px;
 }
 
@@ -73,7 +73,7 @@ main{
     font-size: 5.3rem;
     font-weight: 300;
     color: rgb(245, 245, 245);
-    text-shadow: 2px 3px rgb(8, 8, 8);
+    text-shadow: 2px 2px rgb(8, 8, 8);
     letter-spacing: 2px;
     text-decoration: underline 4px white;
 }
@@ -99,7 +99,7 @@ main{
     font-size: 1.7rem;
     font-weight: bolder;
     color: rgba(255, 255, 255, 0.781);
-    text-shadow: 2px 3px rgb(0, 0, 0);
+    text-shadow: 2px 2px rgb(0, 0, 0);
     letter-spacing: 4px;
     margin-top: 24result.innerText = "Got it!";
 
@@ -109,6 +109,18 @@ main{
 @media (max-width: 925px){
     *{
         font-size: 80%;
+    }
+    .color-generator h2{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    .result-message h2{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    #titulo{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    .result-group{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
     }
 
     .opcoes{
@@ -123,6 +135,7 @@ main{
 @media (max-width: 635px){
     *{
         font-size: 70%;
+        text-shadow: 1px 1px rgb(0, 0, 0); 
     }
 
     .opcoes{
@@ -136,12 +149,25 @@ main{
     .result-group h2{
         font-size: 1.8rem;
     }
+    .color-generator h2{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    .result-message h2{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    #titulo{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
+    .result-group{
+        text-shadow: 1px 1px rgb(0, 0, 0); 
+    }
 }
 
 @media (max-width: 512px){
     *{
         font-size: 50%;
     }
+    
 
     .opcoes{
         width: 9rem;
@@ -153,18 +179,34 @@ main{
     .group-opcoes{
         display: grid;
         grid-template-columns: 4fr 4fr;
-        
+        margin-top: 10px;
         gap: 1rem;
 
     }
 
     #option5{
-        display: none
+        display: inline-flex;
     }
 
     .result-group h2{
         font-size: 1.9rem;
         
+    }
+
+    .result-message{
+        padding-top: 10px;
+    }
+    .color-generator h2{
+        text-shadow: 0px 1px rgb(0, 0, 0); 
+    }
+    .result-message h2{
+        text-shadow: 0px 1px rgb(0, 0, 0); 
+    }
+    #titulo{
+        text-shadow: 0px 1px rgb(0, 0, 0); 
+    }
+    .result-group{
+        text-shadow: 0px 1px rgb(0, 0, 0); 
     }
 
 }
