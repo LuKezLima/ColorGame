@@ -45,6 +45,8 @@ main{
 .color-generator{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .color-generator h2{
@@ -83,7 +85,8 @@ main{
     height: 180px;
     border-radius: 50%;
     margin: 0px 13px;
-    border: 2px dotted black;
+    border: 1.4px solid white;
+    box-shadow: 2px 1px rgb(124, 124, 124);
     cursor: pointer;
 }
 
